@@ -5,20 +5,20 @@
 class AnnictEpgstationConnector < Formula
   desc "."
   homepage "https://mssn.dev/"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/musaprg/annict-epgstation-connector/releases/download/v0.0.1/annict-epgstation-connector_Darwin_x86_64.tar.gz"
-      sha256 "a15ff945d3cbe347900a2748025c2b4732200bb15932dbe2af00e3fa64041a26"
+    if Hardware::CPU.arm?
+      url "https://github.com/musaprg/annict-epgstation-connector/releases/download/v0.0.2/annict-epgstation-connector_Darwin_arm64.tar.gz"
+      sha256 "6c2de922ce83621a3eb7e8cc717573e47d779823544fd69a2122cc331940e1f9"
 
       def install
         bin.install "annict-epgstation-connector"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/musaprg/annict-epgstation-connector/releases/download/v0.0.1/annict-epgstation-connector_Darwin_arm64.tar.gz"
-      sha256 "f6918a1c153cd8c956ede9a042f361d2f5dca1ded98247907bfd2271a1d0b1e9"
+    if Hardware::CPU.intel?
+      url "https://github.com/musaprg/annict-epgstation-connector/releases/download/v0.0.2/annict-epgstation-connector_Darwin_x86_64.tar.gz"
+      sha256 "c26a91a7094316cfb1a7447f18e6bc4fbb8cb6c9cfda5f31262716119367c670"
 
       def install
         bin.install "annict-epgstation-connector"
@@ -28,16 +28,16 @@ class AnnictEpgstationConnector < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/musaprg/annict-epgstation-connector/releases/download/v0.0.1/annict-epgstation-connector_Linux_arm64.tar.gz"
-      sha256 "fa8a00a9ee23c287ad26a17b5d5c654d763c58e0613ef982d9f223a86c1e937e"
+      url "https://github.com/musaprg/annict-epgstation-connector/releases/download/v0.0.2/annict-epgstation-connector_Linux_arm64.tar.gz"
+      sha256 "f0f0e27934af11e75bed2b3fde3a04d80cefe9b0db79302684f42486b3fd2337"
 
       def install
         bin.install "annict-epgstation-connector"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/musaprg/annict-epgstation-connector/releases/download/v0.0.1/annict-epgstation-connector_Linux_x86_64.tar.gz"
-      sha256 "e294018059c01b9dedea42aaf4dd2674a263d453f2b74d2ce0803b9a95630b0d"
+      url "https://github.com/musaprg/annict-epgstation-connector/releases/download/v0.0.2/annict-epgstation-connector_Linux_x86_64.tar.gz"
+      sha256 "de2ab0cac36b2c6a21e886fccb4ab7462e4814211433b2dea841a838d1d90d25"
 
       def install
         bin.install "annict-epgstation-connector"
